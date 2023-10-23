@@ -130,7 +130,7 @@ require 'json'
 post '/webhook' do
 
   # Respond to indicate that the delivery was successfully received.
-  # Your server should respond with a 2XX response within {% ifversion fpt or ghec %}10{% else %}30{% endif %} seconds of receiving a webhook delivery. If your server takes longer than that to respond, then {% data variables.product.company_short %} terminates the connection and considers the delivery a failure.
+  # Your server should respond with a 2xx response within {% ifversion fpt or ghec %}10{% else %}30{% endif %} seconds of receiving a webhook delivery. If your server takes longer than that to respond, then {% data variables.product.company_short %} terminates the connection and considers the delivery a failure.
   status 202
 
   # Check the `X-GitHub-Event` header to learn what event type was sent.
@@ -216,7 +216,7 @@ const app = express();
 app.post('/webhook', express.json({type: 'application/json'}), (request, response) => {
 
   // Respond to indicate that the delivery was successfully received.
-  // Your server should respond with a 2XX response within {% ifversion fpt or ghec %}10{% else %}30{% endif %} seconds of receiving a webhook delivery. If your server takes longer than that to respond, then {% data variables.product.company_short %} terminates the connection and considers the delivery a failure.
+  // Your server should respond with a 2xx response within {% ifversion fpt or ghec %}10{% else %}30{% endif %} seconds of receiving a webhook delivery. If your server takes longer than that to respond, then {% data variables.product.company_short %} terminates the connection and considers the delivery a failure.
   response.status(202).send('Accepted');
 
   // Check the `x-github-event` header to learn what event type was sent.
